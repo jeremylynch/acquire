@@ -2,6 +2,9 @@ a.cta-panel {
 	i.fa-arrow-right {
 		transition: 0.5s;
 	}
+	p {
+		flex: 1;
+	}
 	&:hover {
 		i.fa-arrow-right {
 			transform: translateX(8px);
