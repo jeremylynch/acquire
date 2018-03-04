@@ -1,0 +1,54 @@
+.team-member {
+  .position {
+    font: 14px/21px "Roboto", sans-serif;
+    color: #A6A6A6;
+  }
+  > a {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    img {
+      height: auto;
+      width: 100%;
+      transition-duration: 0.3s;
+    }
+    .overlay {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      color: white;
+      left: 0;
+      right: 0;
+      text-align: center;
+      opacity: 0;
+      font: 400 14px/21px "Open Sans", sans-serif;
+      letter-spacing: 3px;
+      transition-duration: 0.3s;
+      position: absolute;
+      z-index: 2;
+    }
+    &:after {
+      content: '';
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      position: absolute;
+      background: rgba(0,0,0,0.7);
+      transition-duration: 0.3s;
+      z-index: 1;
+      opacity: 0;
+    }
+    &:hover {
+      .overlay {
+        opacity: 1;
+      }
+      &:after {
+        opacity: 1;
+      }
+      img {
+        transform: scale(1.05);
+      }
+    }
+  }
+}
