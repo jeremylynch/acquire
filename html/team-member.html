@@ -1,0 +1,16 @@
+<div class="col-sm-6 col-md mb-4">
+    <div class="team-member">
+        <a href="https://www.linkedin.com/in/{{ include.linkedin }}/" target="_blank" alt="{{ include.name }}">
+            {% asset '{{ include.image }}' %}
+            <div class="overlay">
+                VIEW LINKEDIN
+            </div>
+        </a>
+        <h6 class="mt-2">{{ include.name }}
+            <a class="pull-right" href="mailto:{{ include.email }}">
+                <i class="fa fa-fw fa-envelope"></i>
+            </a>
+        </h6>
+        <p class="position">{{ include.title }}</p>
+    </div>
+</div>
