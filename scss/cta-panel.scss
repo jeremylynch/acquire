@@ -4,7 +4,10 @@ a.cta-panel {
 	}
 	&:hover {
 		i.fa-arrow-right {
-			transform: translateX(10px);
+			transform: translateX(8px);
+		}
+		.animated {
+			text-decoration: underline;
 		}
 	}
 }
