@@ -36,18 +36,17 @@ blockquote {
 
 .btn {
   border: none;
+  // Remove border on hover
+  &:focus, &:active, &:hover {
+    outline: 0px !important;
+    -webkit-appearance: none;
+  }
 }
 
 .btn-lg {
   height: 50px;
   line-height: 50px;
   padding: 0 20px;
-}
-
-// Remove border on hover
-.btn:focus, .btn:active, .btn:hover {
-  outline:0px !important;
-  -webkit-appearance:none;
 }
 
 span, .navbar, form, .btn {
@@ -64,6 +63,7 @@ html {
   position: relative;
   min-height: 100%;
 }
+
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
