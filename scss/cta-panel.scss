@@ -1,0 +1,10 @@
+a.cta-panel {
+	i.fa-arrow-right {
+		transition: 0.5s;
+	}
+	&:hover {
+		i.fa-arrow-right {
+			transform: translateX(10px);
+		}
+	}
+}
