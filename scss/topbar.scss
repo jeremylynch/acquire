@@ -1,0 +1,116 @@
+/*******
+
+TOPBAR
+
+*******/
+
+.header-logo-bar {
+  padding: 4rem !important;
+}
+
+.mobile-logo {
+  max-width: 150px;
+}
+
+.header-logo {
+  display: inline-block;
+  color: #333;
+  img {
+    display: inline-block;
+    width: 200px;
+    padding: 5px;
+    margin-right: 10px;
+  }
+}
+
+.header-icon {
+  color: #32c5d2;
+  font-size: 24px;
+  padding-right: 10px;
+  vertical-align: -4px;
+}
+
+.header-title {
+  @include media-breakpoint-down(sm) {
+    font-size: 24px;
+  }
+  font-size: 28px;
+  font-weight: bold;
+  vertical-align: middle;
+}
+
+.header-slogan {
+  border-left: 1px solid #fafafa;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 16px;
+  margin: 0px 0px 0px 15px;
+  padding: 0px 0px 0px 15px;
+  text-align: left;
+  text-transform: capitalize;
+  vertical-align: middle;
+}
+
+.contact-info-blocks {
+  float: right;
+  @media (max-width: 992px) {text-align: center;}
+  > div {
+    display: inline-block;
+    padding: 0 10px;
+    border-right: 1px solid #efefef;
+    font-size: 18px;
+    @media (max-width: 992px) {border: none;}
+    &:last-child {
+      border-right: 0;
+      padding-right: 0;
+    }
+    i {
+      margin-right: 5px;
+      &.fa-circle {
+        color: $main-blue;
+      }
+    }
+    > span {
+      display: block;
+      font-size: inherit;
+      color: #333;
+      font-weight: 700;
+    }
+  }
+}
+
+// Animations
+
+.email-animation {
+  .fa-stack {
+    overflow: hidden;
+  }
+  i.fa-envelope {
+    -moz-transition: all 0.3s linear;
+    -webkit-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+  }
+  i.fa-envelope:last-child {
+    margin-top: 30px;
+  }
+  &:hover i.fa-envelope {
+    margin-top: -30px;
+    &:last-child {
+      margin-top: 0px;
+    }
+  }
+}
+
+.phone-animation {
+  i.fa-phone {
+    -moz-transition: all 0.3s linear;
+    -webkit-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+  }
+  &:hover i.fa-phone {
+    -moz-transform:rotate(135deg);
+    -webkit-transform:rotate(135deg);
+    transform:rotate(135deg);
+  }
+}

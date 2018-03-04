@@ -1,0 +1,87 @@
+/*******
+
+Slider Homepage
+
+*******/
+
+.swiper-container {
+  width: 100%;
+  height: 300px;
+  /* Small devices (tablets, 768px and up) */
+  @include media-breakpoint-up(sm) {
+    height: 450px;
+  }
+
+  /* Medium devices (desktops, 992px and up) */
+  @include media-breakpoint-up(md) {
+    height: 500px;
+  }
+
+  /* Large devices (large desktops, 1200px and up) */
+  @include media-breakpoint-up(lg) {
+    min-height: 600px;
+    .swiper-slide {background-position-y: -50px !important;}
+  }
+  @media (min-width: 1650px) {
+    height: 80vh;
+    min-height: 500px;
+  }
+}
+
+.swiper-pagination-bullet-active {
+  background: $main-blue;
+}
+
+.swiper-slide {
+  font-size: 18px;
+  background: #fff;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  padding: 0 80px;
+
+  // This is for the position of the image.
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center top;
+
+  //background: bg-color bg-image position/bg-size bg-repeat bg-origin bg-clip bg-attachment initial|inherit;
+
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+
+  padding: 10px 35px;
+
+  img {
+    width: 250px;
+    padding: 20px;
+    @include media-breakpoint-up(sm) {
+      width: 400px;
+    }
+    height: auto;
+    background: rgba(23, 51, 95, 0.9);
+    border-radius: 10px;
+  }
+  height: 100%;
+}
+
+.no-webp .swiper-slide-1 {
+  background-image: asset_url('slider1.jpg');
+}
+
+.webp .swiper-slide-1 {
+  background-image: asset_url('slider1.webp');
+}
