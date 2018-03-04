@@ -1,0 +1,52 @@
+section {
+  &.contact {
+    h3 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  }
+
+  &#map-cta {
+    padding: 30px 0;
+    span {
+      color: $main-red;
+    }
+  }
+  &#contact-form {
+    @include media-breakpoint-up(md) {
+      .row {
+        margin-top: -100px;
+        box-shadow: rgba(0,0,0,0.15) 0 1.6rem 4.75rem;
+        position: relative;
+        div {
+          z-index: 2;
+        }
+        &:after {
+          content: '';
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          background: image-url('mapsilver.png');
+          background-size: contain;
+          opacity: 0.4;
+          z-index: 1;
+        }
+      }
+    }
+    .contact-info {
+      p, a {
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 1.4;
+      }
+      i {
+        opacity: 0.75;
+      }
+    }
+    form {
+      font-size: 1.2rem;
+    }
+  }
+}
